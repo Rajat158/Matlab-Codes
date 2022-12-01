@@ -1,0 +1,14 @@
+clc;
+close all;
+clear all;
+I0=input('enter reverse saturation current:');
+a=input('Temperature in degree centigrate:');
+k=1.38*10^(-23);
+q=1.6*10^(-19);
+t=a+273;
+v = 0.45:0.01:0.7; 
+Id=I0*(exp((v*q)/(k*t))-1);
+plot(v,Id);
+xlabel('voltage');
+ylabel('current');
+grid on;
